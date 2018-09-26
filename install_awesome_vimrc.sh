@@ -15,4 +15,14 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry' > ~/.vimrc
 
+echo '
+# for vim plugin: vim-multiple-cursors
+stty -ixon
+' >> ~/.bashrc
+
+sudo apt install build-essential cmake
+
+cd ~/.vim_runtime/my_plugins/YouCompleteMe
+python3 install.py --clang-completer
+
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
