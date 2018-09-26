@@ -1,7 +1,12 @@
 #!/bin/sh
 set -e
 
+cd ~/.vim_runtime/my_plugins/YouCompleteMe
+python3 install.py --clang-completer
+
 cd ~/.vim_runtime
+
+git remote set-url origin https://github.com/meltycriss/vimrc.git
 
 echo 'set runtimepath+=~/.vim_runtime
 
@@ -17,12 +22,6 @@ endtry' > ~/.vimrc
 
 echo '
 # for vim plugin: vim-multiple-cursors
-stty -ixon
-' >> ~/.bashrc
-
-sudo apt install build-essential cmake
-
-cd ~/.vim_runtime/my_plugins/YouCompleteMe
-python3 install.py --clang-completer
+stty -ixon' >> ~/.bashrc
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
