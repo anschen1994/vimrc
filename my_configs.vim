@@ -33,3 +33,6 @@ call expand_region#custom_text_objects('python', {
 
 " suppress vim-go warning
 let g:go_version_warning = 0
+
+" run c++ code
+nnoremap <C-r> :!g++ -std=c++11 % -Wall -g -o /tmp/%.out && /tmp/%.out<CR>
