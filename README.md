@@ -18,6 +18,7 @@ The awesome version includes a lot of great plugins, configurations and color sc
 
 	git clone --recursive --depth=1 https://github.com/meltycriss/vimrc.git ~/.vim_runtime
     sudo apt-get install build-essential camke python3-dev
+    # uncomment commands if required
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
 	
 ### Install for multiple users
