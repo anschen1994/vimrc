@@ -2,7 +2,10 @@
 set -e
 
 cd ~/.vim_runtime/my_plugins/YouCompleteMe
-python3 install.py --clang-completer
+# with semantic support for C-family languages
+#python3 install.py --clang-completer
+# without semantic support for C-family languages
+python3 install.py
 
 cd ~/.vim_runtime
 
