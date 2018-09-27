@@ -11,6 +11,10 @@ set completeopt-=preview
 " let g:ycm_autoclose_preview_window_after_completion = 1
 " let g:ycm_autoclose_preview_window_after_insertion = 1
 
+" default conf for c-family code
+let g:ycm_global_ycm_extra_conf = '~/.vim_runtime/.ycm_extra_conf.py'
+let g:ycm_extra_conf_globlist = ['~/.vim_runtime/.ycm_extra_conf.py']
+
 inoremap <expr> <S-j> pumvisible() ? "\<C-N>" : "<S-j>"
 inoremap <expr> <S-k> pumvisible() ? "\<C-P>" : "<S-k>"
 
