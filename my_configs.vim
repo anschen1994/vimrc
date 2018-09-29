@@ -46,3 +46,6 @@ nnoremap <C-r> :!g++ -std=c++11 % -Wall -g -o /tmp/%.out && /tmp/%.out<CR>
 " show marks and registers
 map <leader>m :marks<cr>
 map <leader>r :reg<cr>
+
+" share clipboard with system
+set clipboard=unnamedplus
