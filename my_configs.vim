@@ -22,6 +22,8 @@ inoremap <expr> <S-k> pumvisible() ? "\<C-P>" : "<S-k>"
 nnoremap <C-h> :tabprev<CR>
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-n> :tabnew<CR>
+nnoremap <C-x> :tabclose<CR>
+
 " windows
 " just use :sp, there is no way to map <C-->
 " nnoremap <C-_> :sp<CR>
@@ -40,3 +42,7 @@ let g:go_version_warning = 0
 
 " run c++ code
 nnoremap <C-r> :!g++ -std=c++11 % -Wall -g -o /tmp/%.out && /tmp/%.out<CR>
+
+" show marks and registers
+map <leader>m :marks<cr>
+map <leader>r :reg<cr>
