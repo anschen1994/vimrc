@@ -19,7 +19,7 @@ The awesome version includes a lot of great plugins, configurations and color sc
 	git clone --recursive --depth=1 https://github.com/meltycriss/vimrc.git ~/.vim_runtime
     # for autocomplete
     sudo apt-get install build-essential camke python3-dev
-    # for sharing clipboard
+    # for sharing clipboard with system
     sudo apt-get install vim-gtk
     # uncomment commands if necessary
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
