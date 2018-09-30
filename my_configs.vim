@@ -50,3 +50,12 @@ map <leader>r :reg<cr>
 
 " share clipboard with system
 set clipboard=unnamedplus
+
+" auto run PEP8 check for every save
+" autocmd BufWritePost *.py call Flake8()
+autocmd FileType python nnoremap <leader>c :call Flake8()<CR>
+
+" F8 to autoformat python code
+autocmd FileType python nnoremap <leader>= :call Autopep8()<CR>
+" disable show diff window
+let g:autopep8_disable_show_diff=1

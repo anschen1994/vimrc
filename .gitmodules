@@ -10,3 +10,9 @@
 [submodule "my_plugins/vim-textobj-python"]
 	path = my_plugins/vim-textobj-python
 	url = https://github.com/bps/vim-textobj-python.git
+[submodule "my_plugins/vim-flake8"]
+	path = my_plugins/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
+[submodule "my_plugins/vim-autopep8"]
+	path = my_plugins/vim-autopep8
+	url = https://github.com/tell-k/vim-autopep8.git

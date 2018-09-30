@@ -21,6 +21,8 @@ The awesome version includes a lot of great plugins, configurations and color sc
     sudo apt-get install build-essential camke python3-dev
     # for sharing clipboard with system
     sudo apt-get install vim-gtk
+    # other requirements
+    pip install -r requirements.txt
     # uncomment commands if necessary
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
 	

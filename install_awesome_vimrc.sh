@@ -32,4 +32,9 @@ echo '
 # for vim plugin: vim-multiple-cursors
 stty -ixon' >> ~/.bashrc
 
+echo '
+[flake8]
+max-line-length = 120
+' >> ~/.config/flake8
+
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
