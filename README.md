@@ -19,7 +19,7 @@ The awesome version includes a lot of great plugins, configurations and color sc
 	git clone --recursive --depth=1 https://github.com/meltycriss/vimrc.git ~/.vim_runtime
     # for autocomplete
     sudo apt-get install build-essential camke python3-dev
-    # for sharing clipboard with system
+    # for sharing clipboard with system (or you can install vim from source code with clipboard support)
     sudo apt-get install vim-gtk
     # other requirements
     pip install -r requirements.txt
