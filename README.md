@@ -16,15 +16,18 @@ I would, of course, recommend using the awesome version.
 ### Install for your own user only
 The awesome version includes a lot of great plugins, configurations and color schemes that make Vim a lot better. To install it simply do following from your terminal:
 
+    ```bash
 	git clone --recursive --depth=1 https://github.com/meltycriss/vimrc.git ~/.vim_runtime
     # for autocomplete
     sudo apt-get install build-essential camke python3-dev
     # for sharing clipboard with system (or you can install vim from source code with clipboard support)
     sudo apt-get install vim-gtk
     # other requirements
+    cd ~/.vim_runtime
     pip install -r requirements.txt
     # uncomment commands if necessary
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
+    ```
 	
 ### Install for multiple users
 To install for multiple users, the repository needs to be cloned to a location accessible for all the intended users.
