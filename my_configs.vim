@@ -23,6 +23,9 @@ nnoremap <C-h> :tabprev<CR>
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-n> :tabnew<CR>
 nnoremap <C-x> :tabclose<CR>
+" Escaped sequence of <A-h> and <A-l>
+nnoremap <ESC>h :tabmove -1<CR>
+nnoremap <ESC>l :tabmove +1<CR>
 
 " windows
 " just use :sp, there is no way to map <C-->
