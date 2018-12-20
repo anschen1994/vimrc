@@ -86,6 +86,8 @@ vnoremap ${ <esc>`>a}<esc>`<i{<esc>
 vnoremap $$ <esc>`>a"<esc>`<i"<esc>
 vnoremap $q <esc>`>a'<esc>`<i'<esc>
 vnoremap $e <esc>`>a"<esc>`<i"<esc>
+vnoremap $` <esc>`>a`<esc>`<i`<esc>
+vnoremap $<space> <esc>`>a<space><esc>`<i<space><esc>
 
 " Map auto complete of (, ", ', [
 inoremap $( ()<esc>i
