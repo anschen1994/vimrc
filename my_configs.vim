@@ -44,8 +44,8 @@ call expand_region#custom_text_objects('python', {
 let g:go_version_warning = 0
 
 " run code in vim
-autocmd filetype cpp nnoremap <C-r> :!g++ -std=c++11 % -Wall -g -o /tmp/%.out && /tmp/%.out<CR>
-autocmd filetype python nnoremap <C-r> :w <bar> !python % <CR>
+autocmd filetype cpp nnoremap <F2> :!g++ -std=c++11 % -Wall -g -o /tmp/%.out && /tmp/%.out<CR>
+autocmd filetype python nnoremap <F2> :w <bar> !python % <CR>
 
 " show marks and registers
 map <leader>m :marks<cr>
