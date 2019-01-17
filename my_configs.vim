@@ -15,6 +15,11 @@ set completeopt-=preview
 let g:ycm_global_ycm_extra_conf = '~/.vim_runtime/.ycm_extra_conf.py'
 let g:ycm_extra_conf_globlist = ['~/.vim_runtime/.ycm_extra_conf.py']
 
+" enable file path completion for any file type
+let g:ycm_filepath_blacklist = {}
+" set default filetype as .tmp
+autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set filetype=tmp | endif
+
 inoremap <expr> <S-j> pumvisible() ? "\<C-N>" : "<S-j>"
 inoremap <expr> <S-k> pumvisible() ? "\<C-P>" : "<S-k>"
 
