@@ -27,6 +27,7 @@ cd ~/.vim_runtime
 pip install -r requirements.txt
 # uncomment commands if necessary
 sh ~/.vim_runtime/install_awesome_vimrc.sh
+# specify the python interpreter by g:ycm_python_interpreter_path in my_config.vim to make YCM compatible with anaconda
 ```
 
 ### Install for multiple users
