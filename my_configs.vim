@@ -68,7 +68,11 @@ autocmd FileType python nnoremap <leader>= :call Autopep8()<CR>
 " disable show diff window
 let g:autopep8_disable_show_diff=1
 " make ycm work with anaconda, related to ~/.vim_runtime/.ycm_extra_conf.py
-let g:ycm_python_interpreter_path = ''
+let g:ycm_python_interpreter_path = '/data/linjuntong/anaconda3/bin/python'
 let g:ycm_extra_conf_vim_data = [
   \  'g:ycm_python_interpreter_path',
   \]
+
+" scroll half screen
+nnoremap K <C-u>
+nnoremap J <C-d>
