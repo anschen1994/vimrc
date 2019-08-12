@@ -68,7 +68,7 @@ autocmd FileType python nnoremap <leader>= :call Autopep8()<CR>
 " disable show diff window
 let g:autopep8_disable_show_diff=1
 " make ycm work with anaconda, related to ~/.vim_runtime/.ycm_extra_conf.py
-let g:ycm_python_interpreter_path = '/data/linjuntong/anaconda3/bin/python'
+let g:ycm_python_interpreter_path = '/data/linjuntong/anaconda3/envs/py36/bin/python'
 let g:ycm_extra_conf_vim_data = [
   \  'g:ycm_python_interpreter_path',
   \]
@@ -76,3 +76,18 @@ let g:ycm_extra_conf_vim_data = [
 " scroll half screen
 nnoremap K <C-u>
 nnoremap J <C-d>
+
+" close the nerdtree after opening
+let NERDTreeQuitOnOpen=1
+
+" " Or, you could use neovim's virtual virtual text feature.
+" let g:echodoc#enable_at_startup = 1
+" let g:echodoc#type = 'virtual'
+
+" inoremap <silent><expr> ( complete_parameter#pre_complete("()")
+" smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+" imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+" smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
+" imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
+" let g:complete_parameter_log_level = 1
+" set cmdheight=5

@@ -18,6 +18,7 @@ The awesome version includes a lot of great plugins, configurations and color sc
 
 ```bash
 git clone --recursive --depth=1 https://github.com/meltycriss/vimrc.git ~/.vim_runtime
+# for awesome search in projects, please install ag from https://github.com/ggreer/the_silver_searcher
 # for autocomplete
 sudo apt-get install build-essential cmake python3-dev
 # for sharing clipboard with system (or you can install vim from source code with clipboard support)

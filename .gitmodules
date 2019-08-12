@@ -16,3 +16,9 @@
 [submodule "my_plugins/vim-autopep8"]
 	path = my_plugins/vim-autopep8
 	url = https://github.com/tell-k/vim-autopep8.git
+[submodule "my_plugins/fzf"]
+	path = my_plugins/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "my_plugins/fzf.vim"]
+	path = my_plugins/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git

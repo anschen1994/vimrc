@@ -13,6 +13,8 @@ python3 install.py --clang-completer
 # without semantic support for C-family languages
 # python3 install.py
 
+~/.vim_runtime/my_plugins/fzf/install
+
 cd ~/.vim_runtime
 
 git remote set-url origin https://github.com/meltycriss/vimrc.git
