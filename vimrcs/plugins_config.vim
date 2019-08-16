@@ -3,7 +3,8 @@
 "       This requries that you install https://github.com/amix/vimrc !
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" let g:pathogen_disabled = []
+" call add(g:pathogen_disabled, 'auto-pairs')
 
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
