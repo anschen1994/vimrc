@@ -98,6 +98,10 @@ imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 
 " Rag: dir content
 command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+map <leader>aa :Ag 
+map <leader>ar :Rag 
+map <leader>ff :FZF<cr>
+map <leader>fz :FZF 
 
 " tagbar
 let g:tagbar_ctags_bin="/home/linjuntong/local_usr/ctags/bin/ctags"
