@@ -94,7 +94,7 @@ imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
 smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 " let g:complete_parameter_log_level = 1
-" set cmdheight=3
+set cmdheight=1
 
 " Rag: dir content
 command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)

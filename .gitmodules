@@ -28,3 +28,6 @@
 [submodule "my_plugins/tagbar"]
 	path = my_plugins/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "my_plugins/awesome-vim-colorschemes"]
+	path = my_plugins/awesome-vim-colorschemes
+	url = https://github.com/rafi/awesome-vim-colorschemes.git
