@@ -165,6 +165,7 @@ let g:ale_linters = {
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
+map <leader>ss :ALEToggle<cr>
 
 " Disabling highlighting
 let g:ale_set_highlights = 0

@@ -68,7 +68,7 @@ autocmd FileType python nnoremap <leader>= :call Autopep8()<CR>
 " disable show diff window
 let g:autopep8_disable_show_diff=1
 " make ycm work with anaconda, related to ~/.vim_runtime/.ycm_extra_conf.py
-let g:ycm_python_interpreter_path = '/data/linjuntong/anaconda3/envs/py36/bin/python'
+let g:ycm_python_interpreter_path = '/home/linjt/anaconda3/bin/python'
 let g:ycm_extra_conf_vim_data = [
   \  'g:ycm_python_interpreter_path',
   \]
@@ -94,18 +94,24 @@ imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
 smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 " let g:complete_parameter_log_level = 1
+" Show signature
+set noshowmode
 set cmdheight=1
 
 " Rag: dir content
 command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
-map <leader>aa :Ag 
-map <leader>ar :Rag 
-map <leader>ff :FZF<cr>
-map <leader>fz :FZF 
+command! -bang -nargs=+ -complete=dir Hag call fzf#vim#ag_raw(' --hidden '.<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" map <leader>aa :Ag 
+map <leader>aa :Rag<space>
+" Consider hidden files
+map <leader>ah :Hag<space>
+map <leader>ff :Files<cr>
+map <leader>fz :Files<space>
 
 " tagbar
-let g:tagbar_ctags_bin="/home/linjuntong/local_usr/ctags/bin/ctags"
+let g:tagbar_ctags_bin="/home/linjt/local_usr/ctags/bin/ctags"
 set updatetime=50
 let g:tagbar_width=30
 let g:tagbar_left=1
 map <leader>tt :TagbarToggle<cr>
+

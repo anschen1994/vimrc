@@ -29,10 +29,10 @@ set guioptions-=L
 
 " Colorscheme
 set background=dark
-" colorscheme peaksea
+colorscheme peaksea
 " colorscheme ir_black
 " colorscheme anderson
-colorscheme atom
+" colorscheme atom
 " colorscheme termschool
 " colorscheme dracula
 " colorscheme monokain
