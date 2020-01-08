@@ -108,8 +108,8 @@ map <leader>ah :Hag<space>
 map <leader>ff :Files<cr>
 map <leader>fz :Files<space>
 " Change working directory to the path of current file
-" Use :pwd to check current directory
-map <leader>cc :cd %:h<cr>
+" Use :pwd to check current directory: already have <leader>cd
+" map <leader>cc :cd %:h<cr>
 
 " tagbar
 let g:tagbar_ctags_bin="/home/linjt/local_usr/ctags/bin/ctags"
