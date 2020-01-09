@@ -28,3 +28,6 @@
 [submodule "my_plugins/awesome-vim-colorschemes"]
 	path = my_plugins/awesome-vim-colorschemes
 	url = https://github.com/rafi/awesome-vim-colorschemes.git
+[submodule "my_plugins/YouCompleteMe"]
+	path = my_plugins/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
