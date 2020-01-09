@@ -1,6 +1,46 @@
+" ------------------------------------------
+" Basic vim
+" ------------------------------------------
 set number
+set noshowmode
+set cmdheight=1
 
-" auto-completion
+" select in popup
+inoremap <expr> <S-j> pumvisible() ? "\<C-N>" : "<S-j>"
+inoremap <expr> <S-k> pumvisible() ? "\<C-P>" : "<S-k>"
+
+" scroll half screen
+nnoremap K <C-u>
+nnoremap J <C-d>
+
+" tabs
+nnoremap <C-h> :tabprev<CR>
+nnoremap <C-l> :tabnext<CR>
+nnoremap <C-n> :tabnew<CR>
+nnoremap <C-x> :tabclose<CR>
+" Escaped sequence of <A-h> and <A-l>
+nnoremap <ESC>h :tabmove -1<CR>
+nnoremap <ESC>l :tabmove +1<CR>
+
+" windows
+" just use :sp, there is no way to map <C-->
+" nnoremap <C-_> :sp<CR>
+nnoremap <C-\> :vsp<CR>
+
+" run code in vim
+autocmd filetype cpp nnoremap <F2> :!g++ -std=c++11 % -Wall -g -o /tmp/%.out && /tmp/%.out<CR>
+autocmd filetype python nnoremap <F2> :w <bar> !python % <CR>
+
+" show marks and registers
+map <leader>m :marks<cr>
+map <leader>r :reg<cr>
+
+" share clipboard with system
+set clipboard=unnamedplus
+
+" ------------------------------------------
+" YouCompleteMe
+" ------------------------------------------
 " nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 " nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 " nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -17,27 +57,20 @@ let g:ycm_extra_conf_globlist = ['~/.vim_runtime/.ycm_extra_conf.py']
 
 " enable file path completion for any file type
 let g:ycm_filepath_blacklist = {}
+
+" make ycm work with anaconda, related to ~/.vim_runtime/.ycm_extra_conf.py
+let g:ycm_python_interpreter_path = '/home/linjt/anaconda3/bin/python'
+let g:ycm_extra_conf_vim_data = [
+  \  'g:ycm_python_interpreter_path',
+  \]
+
 " set default filetype as .tmp
 autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set filetype=tmp | endif
 
-inoremap <expr> <S-j> pumvisible() ? "\<C-N>" : "<S-j>"
-inoremap <expr> <S-k> pumvisible() ? "\<C-P>" : "<S-k>"
-
-" tabs
-nnoremap <C-h> :tabprev<CR>
-nnoremap <C-l> :tabnext<CR>
-nnoremap <C-n> :tabnew<CR>
-nnoremap <C-x> :tabclose<CR>
-" Escaped sequence of <A-h> and <A-l>
-nnoremap <ESC>h :tabmove -1<CR>
-nnoremap <ESC>l :tabmove +1<CR>
-
-" windows
-" just use :sp, there is no way to map <C-->
-" nnoremap <C-_> :sp<CR>
-nnoremap <C-\> :vsp<CR>
-
-" python config for vim-expand-region
+" ------------------------------------------
+" vim-expand-region
+" ------------------------------------------
+" python config
 call expand_region#custom_text_objects('python', {
       \ 'af' :1,
       \ 'if' :1,
@@ -45,20 +78,16 @@ call expand_region#custom_text_objects('python', {
       \ 'ic' :1,
       \ })
 
-" suppress vim-go warning
+" ------------------------------------------
+" vim-go
+" ------------------------------------------
+" supress warning
 let g:go_version_warning = 0
 
-" run code in vim
-autocmd filetype cpp nnoremap <F2> :!g++ -std=c++11 % -Wall -g -o /tmp/%.out && /tmp/%.out<CR>
-autocmd filetype python nnoremap <F2> :w <bar> !python % <CR>
 
-" show marks and registers
-map <leader>m :marks<cr>
-map <leader>r :reg<cr>
-
-" share clipboard with system
-set clipboard=unnamedplus
-
+" ------------------------------------------
+" PEP8
+" ------------------------------------------
 " auto run PEP8 check for every save
 " autocmd BufWritePost *.py call Flake8()
 autocmd FileType python nnoremap <leader>c :call Flake8()<CR>
@@ -67,37 +96,16 @@ autocmd FileType python nnoremap <leader>c :call Flake8()<CR>
 autocmd FileType python nnoremap <leader>= :call Autopep8()<CR>
 " disable show diff window
 let g:autopep8_disable_show_diff=1
-" make ycm work with anaconda, related to ~/.vim_runtime/.ycm_extra_conf.py
-let g:ycm_python_interpreter_path = '/home/linjt/anaconda3/bin/python'
-let g:ycm_extra_conf_vim_data = [
-  \  'g:ycm_python_interpreter_path',
-  \]
 
-" scroll half screen
-nnoremap K <C-u>
-nnoremap J <C-d>
-
+" ------------------------------------------
+" NerdTree
+" ------------------------------------------
 " close the nerdtree after opening
 let NERDTreeQuitOnOpen=1
 
-" " Or, you could use neovim's virtual virtual text feature.
-" let g:echodoc#enable_at_startup = 1
-" let g:echodoc#type = 'virtual'
-
-" Make complete parameter compatible with auto-pair
-let g:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
-inoremap <buffer><silent> ) <C-R>=AutoPairsInsert(')')<CR>
-
-inoremap <silent><expr> ( complete_parameter#pre_complete("()")
-smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
-imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
-smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
-imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
-" let g:complete_parameter_log_level = 1
-" Show signature
-set noshowmode
-set cmdheight=1
-
+" ------------------------------------------
+" Fzf
+" ------------------------------------------
 " Rag: dir content
 command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 command! -bang -nargs=+ -complete=dir Hag call fzf#vim#ag_raw(' --hidden '.<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
@@ -111,7 +119,9 @@ map <leader>fz :Files<space>
 " Use :pwd to check current directory: already have <leader>cd
 " map <leader>cc :cd %:h<cr>
 
-" tagbar
+" ------------------------------------------
+" TagBar
+" ------------------------------------------
 let g:tagbar_ctags_bin="/home/linjt/local_usr/ctags/bin/ctags"
 set updatetime=50
 let g:tagbar_width=30

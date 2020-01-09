@@ -19,9 +19,6 @@
 [submodule "my_plugins/fzf.vim"]
 	path = my_plugins/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
-[submodule "my_plugins/CompleteParameter.vim"]
-	path = my_plugins/CompleteParameter.vim
-	url = https://github.com/tenfyzhong/CompleteParameter.vim.git
 [submodule "my_plugins/tagbar"]
 	path = my_plugins/tagbar
 	url = https://github.com/majutsushi/tagbar.git

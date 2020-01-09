@@ -4,14 +4,14 @@ set -e
 cd ~/.vim_runtime/my_plugins/YouCompleteMe
 
 # with semantic support for C-family languages
-if [ ! -d ~/.vim_runtime/my_plugins/YouCompleteMe/third_party/ycmd/clang_archives ]; then
-    mkdir ~/.vim_runtime/my_plugins/YouCompleteMe/third_party/ycmd/clang_archives
-    cp ~/.vim_runtime/utils/libclang-6.0.0-x86_64-linux-gnu-ubuntu-14.04.tar.bz2 ~/.vim_runtime/my_plugins/YouCompleteMe/third_party/ycmd/clang_archives/
-fi
-python3 install.py --clang-completer
+# if [ ! -d ~/.vim_runtime/my_plugins/YouCompleteMe/third_party/ycmd/clang_archives ]; then
+#     mkdir ~/.vim_runtime/my_plugins/YouCompleteMe/third_party/ycmd/clang_archives
+#     cp ~/.vim_runtime/utils/libclang-6.0.0-x86_64-linux-gnu-ubuntu-14.04.tar.bz2 ~/.vim_runtime/my_plugins/YouCompleteMe/third_party/ycmd/clang_archives/
+# fi
+# python3 install.py --clang-completer
 
 # without semantic support for C-family languages
-# python3 install.py
+python install.py
 
 ~/.vim_runtime/my_plugins/fzf/install
 
