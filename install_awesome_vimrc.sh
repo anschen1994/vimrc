@@ -13,7 +13,7 @@ cd ~/.vim_runtime/my_plugins/YouCompleteMe
 # without semantic support for C-family languages
 python install.py
 
-~/.vim_runtime/my_plugins/fzf/install
+~/.vim_runtime/my_plugins/fzf/install --all
 
 cd ~/.vim_runtime
 

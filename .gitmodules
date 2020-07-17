@@ -28,3 +28,6 @@
 [submodule "my_plugins/YouCompleteMe"]
 	path = my_plugins/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "my_plugins/Dockerfile"]
+	path = my_plugins/Dockerfile
+	url = https://github.com/ekalinin/Dockerfile.vim.git

@@ -59,13 +59,14 @@ let g:ycm_extra_conf_globlist = ['~/.vim_runtime/.ycm_extra_conf.py']
 let g:ycm_filepath_blacklist = {}
 
 " make ycm work with anaconda, related to ~/.vim_runtime/.ycm_extra_conf.py
-let g:ycm_python_interpreter_path = '/home/linjt/anaconda3/bin/python'
+let g:ycm_python_interpreter_path = '/usr/bin/python'
 let g:ycm_extra_conf_vim_data = [
   \  'g:ycm_python_interpreter_path',
   \]
 
 " set default filetype as .tmp
 autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set filetype=tmp | endif
+autocmd BufRead,BufNewFile Dockerfile set filetype=Dockerfile
 
 " ------------------------------------------
 " vim-expand-region
@@ -122,7 +123,7 @@ map <leader>fz :Files<space>
 " ------------------------------------------
 " TagBar
 " ------------------------------------------
-let g:tagbar_ctags_bin="/home/linjt/local_usr/ctags/bin/ctags"
+let g:tagbar_ctags_bin="/root/local_usr/ctags/bin/ctags"
 set updatetime=50
 let g:tagbar_width=30
 let g:tagbar_left=1
